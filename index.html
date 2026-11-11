@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Teo Novelli</title>
+<meta property="og:type" content="website">
+<meta property="og:title" content="Teo Novelli">
+<meta property="og:description" content="Aspiring business developer on the CEMS Master in International Management (Korea University × HEC Paris). Interested in tech, startups, AI and venture capital.">
+<meta property="og:url" content="https://tenosway.github.io/">
+<meta property="og:image" content="https://tenosway.github.io/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://tenosway.github.io/">
+<meta name="description" content="Teo Novelli · CEMS Master in International Management, Korea University and HEC Paris.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22%3E%3Ccircle cx=%2232%22 cy=%2232%22 r=%2232%22 fill=%22%232f52c4%22/%3E%3Ctext x=%2232%22 y=%2242%22 font-family=%22Georgia,serif%22 font-style=%22italic%22 font-size=%2228%22 fill=%22white%22 text-anchor=%22middle%22%3Etn%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..600,0..100,0..1;1,9..144,300..600,0..100,0..1&family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Layout idea: a quiet cool-white page; one tilted pile of experiences that straightens into a list as you scroll. */
+:root{
+  --paper:#f3f4f8;
+  --ink:#131518;
+  --muted:#6c7078;
+  --line:#dcdfe8;
+  --accent:#2f52c4;
+  --accent-soft:#e3e9fb;
+  --display:"Fraunces", "Iowan Old Style", Georgia, serif;
+  --body:"Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+  --w:1120px;
+  color-scheme: light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:clip}
+img{max-width:100%;display:block}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+em{font-style:italic}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 clamp(18px,4vw,40px)}
+.mono{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.lgm{display:inline-block;flex:none;background:currentColor;-webkit-mask:var(--m) center/contain no-repeat;mask:var(--m) center/contain no-repeat}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* NAV */
+.nav{position:fixed;inset:14px 0 auto 0;z-index:50;display:flex;justify-content:center;pointer-events:none;padding:0 14px}
+.nav-in{pointer-events:auto;width:min(var(--w),100%);display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 22px;border-radius:999px;border:1px solid transparent;transition:width .6s cubic-bezier(.2,.8,.2,1),background .4s,box-shadow .4s,border-color .4s,padding .4s}
+.nav.pill .nav-in{width:min(820px,100%);background:rgba(255,255,255,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:var(--line);box-shadow:0 12px 40px -18px rgba(20,24,40,.28);padding:10px 12px 10px 22px}
+.brand{font-family:var(--display);font-size:20px;text-decoration:none;font-variation-settings:"opsz" 40;white-space:nowrap}
+.brand em{font-variation-settings:"opsz" 40,"SOFT" 100,"WONK" 1}
+.links{display:flex;gap:20px;align-items:center}
+.links button{background:none;border:0;padding:4px 0;cursor:pointer;font-size:14px;color:var(--ink);opacity:.75;transition:opacity .2s}
+.links button:hover{opacity:1}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;padding:3px;background:#fff}
+.lang button{border:0;background:none;cursor:pointer;font-family:var(--mono);font-size:11px;letter-spacing:.06em;padding:5px 9px;border-radius:999px;color:var(--muted);transition:background .25s,color .25s}
+.lang button[aria-pressed="true"]{background:var(--ink);color:#fff}
+@media (max-width:820px){.links button{display:none}.nav-in{padding:10px 10px 10px 18px}}
+
+/* HERO */
+.hero{position:relative;padding-top:120px;min-height:min(860px,100svh)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;align-items:end;gap:24px}
+.eyebrow{color:var(--muted);display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+.name{font-family:var(--display);font-weight:330;font-size:clamp(68px,12.5vw,176px);line-height:.86;letter-spacing:-.035em;margin:22px 0 28px;font-variation-settings:"opsz" 144,"SOFT" 30}
+.name .line{display:block;overflow:hidden;padding-bottom:.06em}
+.name .line > span{display:inline-block;animation:rise 1.1s cubic-bezier(.2,.8,.2,1) both}
+.name .line:nth-child(2) > span{animation-delay:.12s}
+.name em{font-weight:300;font-variation-settings:"opsz" 144,"SOFT" 100,"WONK" 1;color:var(--accent)}
+@keyframes rise{from{transform:translateY(105%)}to{transform:none}}
+.lede{max-width:30em;font-size:clamp(18px,1.6vw,21px);color:#2b2e33;margin:0 0 22px;animation:fade 1s .45s both}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.interests{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 28px;animation:fade 1s .52s both}
+.interests .mono{color:var(--muted);margin-right:6px}
+.ichip{background:var(--accent-soft);color:var(--accent);border-radius:999px;padding:7px 14px;font-size:15px;font-weight:500}
+.ctas{display:flex;flex-wrap:wrap;align-items:center;gap:10px 18px;animation:fade 1s .6s both}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:13px 20px;border-radius:999px;border:1px solid var(--ink);text-decoration:none;font-size:15px;font-weight:500;cursor:pointer;background:none;transition:background .25s,color .25s,transform .25s}
+.btn.solid{background:var(--ink);color:#fff}
+.btn:hover{transform:translateY(-2px)}
+.btn.solid:hover{background:var(--accent);border-color:var(--accent)}
+.btn .arr{transition:transform .3s}
+.btn:hover .arr{transform:translateX(3px)}
+
+/* stylized flags: places lived, plus Luxembourg */
+.flags{display:flex;align-items:center;padding-left:7px}
+.flag{width:26px;height:26px;border-radius:50%;overflow:hidden;margin-left:-7px;box-shadow:0 0 0 2px var(--paper),0 0 0 2.6px rgba(19,21,24,.12);transition:margin .45s cubic-bezier(.2,.8,.2,1),transform .35s cubic-bezier(.2,.8,.2,1);background:#fff}
+.flag svg{width:100%;height:100%;display:block}
+.flags:hover .flag{margin-left:5px}
+.flag:hover{transform:translateY(-4px) scale(1.12)}
+
+.photo-wrap{position:relative;justify-self:end;width:min(100%,440px)}
+.photo{position:relative;width:100%;height:auto;-webkit-mask-image:linear-gradient(#000 82%,transparent);mask-image:linear-gradient(#000 82%,transparent);animation:photo 1.4s .15s cubic-bezier(.2,.8,.2,1) both;will-change:transform}
+@keyframes photo{from{opacity:0;transform:translateY(40px) scale(.97)}to{opacity:1;transform:none}}
+.photo-move{will-change:transform;transform-origin:50% 60%}
+.field{position:absolute;inset:0;width:100%;height:100%;z-index:0;display:block}
+.hero > .wrap{position:relative;z-index:1}
+.scroll-cue{position:absolute;z-index:1;left:50%;bottom:18px;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;color:var(--muted)}
+.scroll-cue i{font-style:normal;animation:bob 1.8s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(5px)}}
+@media (max-width:820px){
+  .hero{padding-top:96px;min-height:0;padding-bottom:20px}
+  .hero-grid{grid-template-columns:1fr}
+  .photo-wrap{justify-self:center;width:min(78%,360px);order:-1;margin-bottom:-30px}
+  .scroll-cue{display:none}
+}
+
+/* CURSOR */
+#cursor{position:fixed;left:0;top:0;will-change:transform;width:16px;height:16px;margin:-8px 0 0 -8px;border:1.5px solid var(--ink);border-radius:50%;pointer-events:none;z-index:80;display:grid;place-items:center;opacity:0;transition:width .4s cubic-bezier(.2,.8,.2,1),height .4s cubic-bezier(.2,.8,.2,1),margin .4s cubic-bezier(.2,.8,.2,1),background .3s,border-color .3s,opacity .3s}
+#cursor.on{opacity:1}
+#cursor.big{width:58px;height:58px;margin:-29px 0 0 -29px;background:#fff;border-color:var(--ink);box-shadow:0 14px 30px -14px rgba(10,15,40,.45)}
+#cursor span{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);opacity:0;transition:opacity .2s}
+#cursor.big span{opacity:1}
+@media (pointer:coarse){#cursor{display:none}}
+
+/* SECTIONS */
+section{padding:clamp(80px,11vw,140px) 0 0;overflow-x:clip}
+.sec-head{display:grid;grid-template-columns:160px 1fr;gap:24px;align-items:baseline;margin-bottom:46px}
+.sec-head .mono{color:var(--muted)}
+.h2{font-family:var(--display);font-weight:340;font-size:clamp(40px,6vw,76px);line-height:1;letter-spacing:-.03em;margin:0;text-wrap:balance;font-variation-settings:"opsz" 120,"SOFT" 30}
+.h2 em{font-variation-settings:"opsz" 120,"SOFT" 100,"WONK" 1;color:var(--accent)}
+@media (max-width:720px){.sec-head{grid-template-columns:1fr;gap:12px}}
+.about-text{font-family:var(--display);font-weight:320;font-size:clamp(24px,2.9vw,36px);line-height:1.28;letter-spacing:-.012em;max-width:30em;margin:0;font-variation-settings:"opsz" 72,"SOFT" 50;text-wrap:pretty}
+.about-text em{color:var(--accent);font-variation-settings:"opsz" 72,"SOFT" 100,"WONK" 1}
+
+/* EDUCATION: one rail, two stops */
+.edu{position:relative;display:grid;gap:70px}
+.edu::before{content:"";position:absolute;left:6px;top:14px;bottom:30px;width:1px;background:linear-gradient(var(--ink),var(--line) 60%,transparent)}
+.edu-group{display:grid;grid-template-columns:160px 1fr;gap:24px}
+.rail{position:relative;padding-left:30px}
+.rail::before{content:"";position:absolute;left:0;top:10px;width:13px;height:13px;border-radius:50%;background:var(--paper);border:1.5px solid var(--ink)}
+.edu-group.now .rail::before{background:var(--accent);border-color:var(--accent);box-shadow:0 0 0 5px var(--accent-soft)}
+.rail-yr{display:block;font-family:var(--display);font-size:26px;line-height:1.2;letter-spacing:-.01em;font-variant-numeric:tabular-nums;font-variation-settings:"opsz" 40}
+.rail-lbl{display:block;color:var(--muted);margin-top:4px}
+.edu-head{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin:4px 0 22px}
+.edu-head p{margin:0;color:var(--muted);max-width:38em;font-size:15.5px}
+.schools{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.school{position:relative;border-radius:22px;padding:24px 26px 24px;min-height:340px;display:flex;flex-direction:column;justify-content:space-between;color:#f7f5ef;overflow:hidden;transform-origin:50% 100%;will-change:transform;transition:box-shadow .4s}
+.school::after{content:"";position:absolute;inset:0;background:radial-gradient(120% 80% at 100% 0%,rgba(255,255,255,.14),transparent 55%);pointer-events:none}
+.school.ku{background:#7f1d2b;z-index:2}
+.school.hec{background:#13244f}
+.school:hover{box-shadow:0 30px 60px -30px rgba(10,15,40,.55)}
+.card-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.school-logo{color:#f7f5ef;opacity:.92}
+.tag{border:1px solid rgba(255,255,255,.45);border-radius:999px;padding:4px 10px;opacity:.9}
+.school .term{opacity:.78;margin-top:18px;display:block}
+.school h3{font-family:var(--display);font-weight:330;font-size:clamp(30px,3.6vw,48px);line-height:.98;letter-spacing:-.025em;margin:8px 0 0;text-wrap:balance;font-variation-settings:"opsz" 144,"SOFT" 40}
+.school h3 em{font-variation-settings:"opsz" 144,"SOFT" 100,"WONK" 1}
+.card-foot{display:grid;gap:12px;margin-top:26px}
+.place{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.28);padding-top:12px;font-size:15px}
+.place .mono{opacity:.72}
+.school p{margin:0;opacity:.9;font-size:15px;max-width:34em}
+.cross{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:3;width:44px;height:44px;border-radius:50%;background:var(--paper);display:grid;place-items:center;font-family:var(--display);font-size:22px;box-shadow:0 0 0 1px var(--line)}
+.ucards{display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:20px}
+.ucard{position:relative;background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px 22px 20px;min-height:290px;display:flex;flex-direction:column;justify-content:space-between;will-change:transform;transition:box-shadow .4s,border-color .4s}
+.ucard:hover{box-shadow:0 26px 50px -30px rgba(10,15,40,.4);border-color:#c9cedc}
+.ucard .lgm{color:var(--lc);opacity:.88}
+.ucard .yrs{color:var(--muted)}
+.ucard h3{font-family:var(--display);font-weight:340;font-size:clamp(24px,2.4vw,30px);line-height:1.04;letter-spacing:-.02em;margin:22px 0 6px;text-wrap:balance;font-variation-settings:"opsz" 72,"SOFT" 40}
+.ucard .deg{font-weight:500}
+.ucard .sub{color:var(--muted);font-size:15px;margin-top:2px}
+.ucard .place{border-top-color:var(--line);color:#3a3e45}
+.ucard .place .mono{color:var(--muted);opacity:1}
+@media (max-width:900px){.ucards{grid-template-columns:1fr 1fr}.ucards .ucard:first-child{grid-column:1 / -1}}
+@media (max-width:760px){
+  .edu-group{grid-template-columns:1fr;gap:14px}
+  .schools{grid-template-columns:1fr}.cross{display:none}
+  .ucards{grid-template-columns:1fr}
+}
+
+/* EXPERIENCE: the pile */
+.stack{perspective:1700px;padding:30px 0 30px}
+.stack-in{max-width:980px;margin:0 auto;display:grid;gap:12px;transform-style:preserve-3d;transform-origin:50% 40%;will-change:transform}
+.spine{--c:#222;--t:#fff;position:relative;background:var(--c);color:var(--t);border-radius:6px;box-shadow:0 1px 0 rgba(255,255,255,.12) inset,0 -3px 0 rgba(0,0,0,.18) inset,0 18px 30px -22px rgba(0,0,0,.6);will-change:transform;transition:box-shadow .3s,outline-color .3s;outline:2px solid transparent;outline-offset:3px}
+.spine.hl{outline-color:var(--c)}
+.spine-row{width:100%;background:none;border:0;color:inherit;cursor:pointer;display:grid;grid-template-columns:200px 1.4fr 1fr 22px;align-items:center;gap:16px;padding:20px 24px;text-align:left}
+.spine .yrs{font-family:var(--mono);font-size:13px;letter-spacing:.03em;font-variant-numeric:tabular-nums;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.spine .now{font-size:10px;letter-spacing:.08em;text-transform:uppercase;border:1px solid currentColor;border-radius:999px;padding:1px 7px}
+.spine .role{font-family:var(--display);font-style:italic;font-size:clamp(19px,2.1vw,25px);line-height:1.1;font-variation-settings:"opsz" 60,"SOFT" 100,"WONK" 1}
+.spine .org{font-family:var(--mono);font-size:12px;letter-spacing:.07em;text-transform:uppercase;display:flex;align-items:center;justify-content:flex-end;gap:12px;text-align:right}
+.spine .org > span:last-child{opacity:.85}
+.plus{display:inline-block;text-align:right;transition:transform .35s;font-size:20px;line-height:1}
+.spine.open .plus{transform:rotate(45deg)}
+.spine:hover{box-shadow:0 1px 0 rgba(255,255,255,.12) inset,0 -3px 0 rgba(0,0,0,.18) inset,0 26px 40px -22px rgba(0,0,0,.7)}
+.detail{display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s cubic-bezier(.2,.8,.2,1)}
+.spine.open .detail{grid-template-rows:1fr}
+.detail > div{overflow:hidden}
+.detail-in{display:grid;grid-template-columns:200px 1fr;gap:16px;border-top:1px solid rgba(255,255,255,.18);margin:0 24px;padding:18px 0 24px}
+.detail .where{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;opacity:.85;display:grid;gap:4px;align-content:start}
+.detail ul{margin:0;padding-left:18px;display:grid;gap:6px;font-size:15.5px}
+.stack-hint{display:flex;justify-content:space-between;color:var(--muted);max-width:980px;margin:0 auto}
+@media (max-width:720px){
+  .spine-row{grid-template-columns:1fr auto;grid-template-areas:"yrs plus" "role role" "org org";gap:6px 12px;padding:16px 18px}
+  .spine .yrs{grid-area:yrs}.spine .role{grid-area:role}.spine .org{grid-area:org;text-align:left;justify-content:flex-start;flex-direction:row-reverse}.spine .plus{grid-area:plus}
+  .detail-in{grid-template-columns:1fr;margin:0 18px;gap:10px}
+}
+
+/* SKILLS */
+.sk-hint{color:var(--muted);margin:-26px 0 30px 184px}
+@media (max-width:720px){.sk-hint{margin-left:0}}
+.sk{display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(24px,4vw,56px);align-items:start}
+.sk-groups{display:grid;gap:26px}
+.sk-group h3{margin:0 0 12px;font-family:var(--mono);font-weight:400;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:flex;gap:10px;align-items:center}
+.sk-group h3 b{font-weight:400;color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid var(--line);background:#fff;border-radius:999px;padding:8px 14px;font-size:14.5px;cursor:pointer;transition:border-color .2s,transform .25s,background .2s,color .2s}
+.chip:hover{border-color:var(--ink);transform:translateY(-2px)}
+.chip[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.sk-panel{position:sticky;top:96px;background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px;min-height:330px;box-shadow:0 30px 60px -44px rgba(10,15,40,.5)}
+.sk-panel .grp{color:var(--muted)}
+.sk-panel h4{font-family:var(--display);font-weight:340;font-size:clamp(28px,3vw,38px);line-height:1.04;letter-spacing:-.02em;margin:10px 0 16px;text-wrap:balance;font-variation-settings:"opsz" 72,"SOFT" 40}
+.sk-panel p{margin:0 0 22px;font-size:16.5px;color:#2b2e33;text-wrap:pretty}
+.sk-panel .wl{color:var(--muted);margin-bottom:10px;display:block}
+.refs{display:grid;gap:8px}
+.ref{display:flex;align-items:center;gap:12px;width:100%;text-align:left;background:var(--paper);border:1px solid transparent;border-radius:14px;padding:10px 14px;cursor:pointer;transition:border-color .2s,transform .25s}
+.ref:hover{border-color:var(--ink);transform:translateX(3px)}
+.ref .rl{display:grid;place-items:center;width:52px;flex:none}
+.ref .rl .lgm{max-width:52px}
+.ref .rn{font-weight:500;font-size:15px}
+.ref .ry{margin-left:auto;font-family:var(--mono);font-size:11.5px;color:var(--muted);white-space:nowrap}
+.sk-anim{animation:panelIn .5s cubic-bezier(.2,.8,.2,1) both}
+@keyframes panelIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media (max-width:860px){.sk{grid-template-columns:1fr}.sk-panel{position:relative;top:0}}
+.langs{display:grid;grid-template-columns:repeat(4,1fr);gap:0 28px;margin-top:56px;border-top:1px solid var(--line)}
+.langrow{display:grid;gap:8px;padding:16px 0}
+.langrow .top{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.langrow .lvl{font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+.bars{display:grid;grid-template-columns:repeat(6,1fr);gap:4px}
+.bars span{height:6px;border-radius:3px;background:var(--line)}
+.bars span.on{background:var(--ink)}
+.bars span.lrn{background:var(--accent)}
+@media (max-width:760px){.langs{grid-template-columns:1fr 1fr}}
+
+/* CONTACT */
+.contact{padding-bottom:40px}
+.big-talk{font-family:var(--display);font-weight:320;font-size:clamp(64px,13vw,190px);line-height:.88;letter-spacing:-.04em;margin:0 0 30px;font-variation-settings:"opsz" 144,"SOFT" 30}
+.big-talk em{color:var(--accent);font-variation-settings:"opsz" 144,"SOFT" 100,"WONK" 1}
+.contact-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:end}
+.contact p{max-width:32em;color:#2b2e33;margin:0}
+.clist{display:grid;border-top:1px solid var(--ink)}
+.citem{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:18px 0;border-bottom:1px solid var(--line);text-decoration:none;flex-wrap:wrap}
+.citem .k{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);min-width:80px}
+.citem .v{font-size:clamp(17px,1.8vw,21px);flex:1;word-break:break-word}
+a.citem:hover .v{color:var(--accent)}
+.citem .v::before{content:"\2192";display:inline-block;width:0;opacity:0;overflow:hidden;vertical-align:bottom;transition:width .45s cubic-bezier(.2,.8,.2,1),opacity .3s}
+.citem:hover .v::before{width:1.5em;opacity:1}
+.mini{border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 12px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;cursor:pointer}
+.mini:hover{border-color:var(--ink)}
+footer{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;color:var(--muted);padding:70px 0 34px}
+footer .flag{width:20px;height:20px}
+@media (max-width:760px){.contact-grid{grid-template-columns:1fr}}
+
+.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,20px);opacity:0;background:var(--ink);color:#fff;padding:10px 16px;border-radius:999px;font-size:14px;transition:.3s;pointer-events:none;z-index:60}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none !important;transition:none !important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav" aria-label="Main">
+  <div class="nav-in">
+    <a class="brand" href="#top" data-go="top">Teo <em>Novelli</em></a>
+    <div class="links">
+      <button data-go="about" data-i18n="nav.about">About</button>
+      <button data-go="edu" data-i18n="nav.edu">Education</button>
+      <button data-go="work" data-i18n="nav.work">Experience</button>
+      <button data-go="skills" data-i18n="nav.skills">Skills</button>
+      <button data-go="contact" data-i18n="nav.contact">Contact</button>
+    </div>
+    <div class="lang" role="group" aria-label="Language">
+      <button data-lang="en" aria-pressed="true">EN</button>
+      <button data-lang="it" aria-pressed="false">IT</button>
+      <button data-lang="fr" aria-pressed="false">FR</button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <canvas class="field" id="field" aria-hidden="true"></canvas>
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow mono">CEMS MIM · Korea University × HEC Paris</div>
+      <h1 class="name"><span class="line"><span>Teo</span></span><span class="line"><span><em>Novelli</em></span></span></h1>
+      <p class="lede" data-i18n="hero.lede">Aspiring business developer on the CEMS Master in International Management, with study and work in four countries so far.</p>
+      <div class="interests"><span class="mono" data-i18n="int.label">Interested in</span><span class="ichip">Tech</span><span class="ichip">Startups</span><span class="ichip" data-i18n="int.ai">AI</span><span class="ichip" data-i18n="int.vc">Venture capital</span></div>
+      <div class="ctas">
+        <div class="btns">
+          <button class="btn solid" data-go="contact"><span data-i18n="hero.cta">Get in touch</span><span class="arr">→</span></button>
+          <a class="btn cv-link" href="Teo_Novelli_CV.pdf" target="_blank" rel="noopener" data-cursor="pdf" data-goatcounter-click="cv-download-hero"><span data-i18n="cv">Download CV</span><span class="arr">↓</span></a>
+        </div>
+        <div class="flags" data-flags role="img" aria-label="Italy, Luxembourg, France, Germany, South Korea"></div>
+      </div>
+    </div>
+    <div class="photo-wrap">
+      <div class="photo-move" id="photoMove"><img class="photo" id="photo" src="teo.webp" alt="Portrait of Teo Novelli" width="900" height="1313"></div>
+    </div>
+  </div>
+  <div class="scroll-cue mono" aria-hidden="true"><span data-i18n="scroll">scroll</span><i>↓</i></div>
+</header>
+
+<main>
+  <section id="about">
+    <div class="wrap">
+      <div class="sec-head"><span class="mono">01 · <span data-i18n="nav.about">About</span></span><p class="about-text" data-i18n="about">Two passports, Italian and Luxembourgish, and <em>one accent</em>, from Rome.</p></div>
+    </div>
+  </section>
+
+  <section id="edu">
+    <div class="wrap">
+      <div class="sec-head"><span class="mono">02 · <span data-i18n="nav.edu">Education</span></span><h2 class="h2" data-i18n="edu.title">Where I've <em>studied</em>.</h2></div>
+      <div class="edu">
+        <div class="edu-group now">
+          <div class="rail"><span class="rail-yr">2026 – 27</span><span class="rail-lbl mono" data-i18n="edu.master">Master's</span></div>
+          <div>
+            <div class="edu-head"><span class="lgm" role="img" aria-label="CEMS" style="--m:url(logos/m/cems.png);height:28px;aspect-ratio:3.58"></span><p data-i18n="master.note">CEMS Global Master in International Management.</p></div>
+            <div class="schools" id="schools">
+              <article class="school ku" id="ku">
+                <div class="card-top"><span class="lgm school-logo" role="img" aria-label="Korea University" style="--m:url(logos/m/ku.png);height:52px;aspect-ratio:.74"></span><span class="tag mono" data-i18n="ku.status">Now</span></div>
+                <div>
+                  <span class="term mono" data-i18n="ku.term">Term 1 · Fall 2026</span>
+                  <h3>Korea University <em>Business School</em></h3>
+                </div>
+                <div class="card-foot">
+                  <p data-i18n="ku.focus"></p>
+                  <div class="place"><span data-i18n="ku.place">Seoul, South Korea</span><span class="mono">37.59°N 127.03°E</span></div>
+                </div>
+              </article>
+              <div class="cross" aria-hidden="true">×</div>
+              <article class="school hec" id="hec">
+                <div class="card-top"><span class="lgm school-logo" role="img" aria-label="HEC Paris" style="--m:url(logos/m/hec.png);height:34px;aspect-ratio:2.23"></span><span class="tag mono" data-i18n="hec.status">Next</span></div>
+                <div>
+                  <span class="term mono" data-i18n="hec.term">Term 2 · Spring 2027</span>
+                  <h3>HEC <em>Paris</em></h3>
+                </div>
+                <div class="card-foot">
+                  <p data-i18n="hec.focus"></p>
+                  <div class="place"><span data-i18n="hec.place">Paris, France</span><span class="mono">48.76°N 2.17°E</span></div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div class="edu-group">
+          <div class="rail"><span class="rail-yr">2022 – 25</span><span class="rail-lbl mono" data-i18n="edu.bachelor">Bachelor's</span></div>
+          <div class="ucards" id="ucards"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="sec-head"><span class="mono">03 · <span data-i18n="nav.work">Experience</span></span><h2 class="h2" data-i18n="work.title">Where I've <em>worked</em>.</h2></div>
+      <div class="stack" id="stack"><div class="stack-in" id="stackIn"></div></div>
+      <div class="stack-hint mono"><span data-i18n="work.hint">Newest first · tap a row to open it</span><span>05</span></div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <div class="sec-head"><span class="mono">04 · <span data-i18n="nav.skills">Skills</span></span><h2 class="h2" data-i18n="kit.title">What I <em>bring</em>.</h2></div>
+      <p class="sk-hint mono" data-i18n="skills.hint">Pick a skill to see where it comes from</p>
+      <div class="sk">
+        <div class="sk-groups" id="skGroups"></div>
+        <aside class="sk-panel" id="skPanel" aria-live="polite"></aside>
+      </div>
+      <div class="langs" id="langs"></div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="sec-head" style="margin-bottom:10px"><span class="mono">05 · <span data-i18n="nav.contact">Contact</span></span><span></span></div>
+      <h2 class="big-talk" data-i18n="contact.title">Let's <em>talk</em>.</h2>
+      <div class="contact-grid">
+        <p data-i18n="contact.text"></p>
+        <div class="clist">
+          <div class="citem"><span class="k">Email</span><a class="v" href="mailto:novelliteo1@gmail.com" data-cursor="write" data-goatcounter-click="email">novelliteo1@gmail.com</a><button class="mini" id="copyBtn" data-i18n="copy" data-goatcounter-click="email-copy">Copy</button></div>
+          <a class="citem" href="https://www.linkedin.com/in/teo-novelli" target="_blank" rel="noopener" data-cursor="visit" data-goatcounter-click="linkedin"><span class="k">LinkedIn</span><span class="v">linkedin.com/in/teo-novelli</span><span class="arr">↗</span></a>
+          <a class="citem cv-link" href="Teo_Novelli_CV.pdf" target="_blank" rel="noopener" data-cursor="pdf" data-goatcounter-click="cv-download-contact"><span class="k">CV</span><span class="v" data-i18n="cv">Download CV</span><span class="arr">↓</span></a>
+        </div>
+      </div>
+      <footer class="mono"><span>Teo Novelli · 2026</span><div class="flags" data-flags aria-hidden="true"></div></footer>
+    </div>
+  </section>
+</main>
+
+<div id="cursor" aria-hidden="true"><span id="cursorLabel"></span></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+const T = {
+  en:{
+    "nav.about":"About","nav.edu":"Education","nav.work":"Experience","nav.skills":"Skills","nav.contact":"Contact",
+    "hero.lede":"Aspiring business developer on the CEMS Master in International Management, with study and work in four countries so far.","int.label":"Interested in","int.ai":"AI","int.vc":"Venture capital",
+    "hero.cta":"Get in touch","cv":"Download CV","scroll":"scroll",
+    "about":"Two passports, Italian and Luxembourgish, and <em>one accent</em>, from Rome. I like taking an idea from a sketch to something people actually use, whether it is a clothing brand started in high school or the AI tools I build for myself. Away from the desk I run, play chess, draw and follow cars.",
+    "edu.title":"Where I've <em>studied</em>.","edu.master":"Master's","edu.bachelor":"Bachelor's",
+    "master.note":"Global Master in International Management. One term at each of two member schools, plus a business project with a partner company.",
+    "ku.term":"Term 1 · Fall 2026","ku.status":"Now","ku.place":"Seoul, South Korea",
+    "ku.focus":"Korean business environment, global strategy, organizational behavior, financial management, business Korean.",
+    "hec.term":"Term 2 · Spring 2027","hec.status":"Next","hec.place":"Paris, France",
+    "hec.focus":"Second term from January 2027, alongside the CEMS Business Project.",
+    "work.title":"Where I've <em>worked</em>.","work.hint":"Newest first · tap a row to open it",
+        "kit.title":"What I <em>bring</em>.","skills.hint":"Pick a skill to see where it comes from","skills.where":"Where it comes from",
+    "contact.title":"Let's <em>talk</em>.",
+    "contact.text":"Looking for internships from April 2027 and graduate programmes from September 2027, in tech, startups, AI and venture capital.",
+    "copy":"Copy","copied":"Email copied","cvfail":"Download not available here. Try the LinkedIn profile.",
+    "native":"Native","learning":"Learning","cur.open":"Open","cur.close":"Close","cur.write":"Write","cur.visit":"Visit","cur.pdf":"PDF","cur.why":"Why","cur.see":"See"
+  },
+  it:{
+    "nav.about":"Chi sono","nav.edu":"Formazione","nav.work":"Esperienze","nav.skills":"Competenze","nav.contact":"Contatti",
+    "hero.lede":"Aspirante business developer al CEMS Master in International Management, finora ho studiato e lavorato in quattro paesi.","int.label":"Mi interessano","int.ai":"AI","int.vc":"Venture capital",
+    "hero.cta":"Contattami","cv":"Scarica il CV","scroll":"scorri",
+    "about":"Due passaporti, italiano e lussemburghese, e <em>un accento solo</em>, romano. Mi piace portare un'idea dallo schizzo a qualcosa che la gente usa davvero, che sia un brand di abbigliamento nato al liceo o i tool di AI che mi costruisco da solo. Lontano dalla scrivania corro, gioco a scacchi, disegno e seguo il mondo delle auto.",
+    "edu.title":"Dove ho <em>studiato</em>.","edu.master":"Magistrale","edu.bachelor":"Triennale",
+    "master.note":"Global Master in International Management. Un semestre in ciascuna di due scuole del network, più un business project con un'azienda partner.",
+    "ku.term":"Semestre 1 · Autunno 2026","ku.status":"Ora","ku.place":"Seul, Corea del Sud",
+    "ku.focus":"Business environment coreano, global strategy, comportamento organizzativo, finanza aziendale, coreano per il business.",
+    "hec.term":"Semestre 2 · Primavera 2027","hec.status":"Prossimo","hec.place":"Parigi, Francia",
+    "hec.focus":"Secondo semestre da gennaio 2027, insieme al CEMS Business Project.",
+    "work.title":"Dove ho <em>lavorato</em>.","work.hint":"Dalla più recente · tocca una riga per aprirla",
+        "kit.title":"Cosa <em>porto</em>.","skills.hint":"Scegli una competenza per vedere da dove viene","skills.where":"Da dove viene",
+    "contact.title":"<em>Parliamone</em>.",
+    "contact.text":"Cerco uno stage da aprile 2027 e graduate program da settembre 2027, nel tech, nelle startup, nell'AI e nel venture capital.",
+    "copy":"Copia","copied":"Email copiata","cvfail":"Download non disponibile qui. Prova il profilo LinkedIn.",
+    "native":"Madrelingua","learning":"In corso","cur.open":"Apri","cur.close":"Chiudi","cur.write":"Scrivi","cur.visit":"Visita","cur.pdf":"PDF","cur.why":"Perché","cur.see":"Vedi"
+  },
+  fr:{
+    "nav.about":"Profil","nav.edu":"Formation","nav.work":"Expériences","nav.skills":"Compétences","nav.contact":"Contact",
+    "hero.lede":"Futur business developer en CEMS Master in International Management, j'ai déjà étudié et travaillé dans quatre pays.","int.label":"Intérêts","int.ai":"IA","int.vc":"Capital-risque",
+    "hero.cta":"Me contacter","cv":"Télécharger le CV","scroll":"défiler",
+    "about":"Deux passeports, italien et luxembourgeois, et <em>un seul accent</em>, romain. J'aime faire passer une idée du croquis à quelque chose que les gens utilisent vraiment, qu'il s'agisse d'une marque de vêtements lancée au lycée ou des outils d'IA que je code pour moi. Loin du bureau, je cours, je joue aux échecs, je dessine et je suis l'actualité automobile.",
+    "edu.title":"Là où j'ai <em>étudié</em>.","edu.master":"Master","edu.bachelor":"Licence",
+    "master.note":"Global Master in International Management. Un semestre dans chacune de deux écoles membres, plus un projet de conseil avec une entreprise partenaire.",
+    "ku.term":"Semestre 1 · Automne 2026","ku.status":"En cours","ku.place":"Séoul, Corée du Sud",
+    "ku.focus":"Environnement des affaires coréen, stratégie globale, comportement organisationnel, gestion financière, coréen des affaires.",
+    "hec.term":"Semestre 2 · Printemps 2027","hec.status":"À venir","hec.place":"Paris, France",
+    "hec.focus":"Deuxième semestre à partir de janvier 2027, avec le CEMS Business Project.",
+    "work.title":"Là où j'ai <em>travaillé</em>.","work.hint":"Du plus récent · touchez une ligne pour l'ouvrir",
+        "kit.title":"Ce que j'<em>apporte</em>.","skills.hint":"Choisissez une compétence pour voir d'où elle vient","skills.where":"D'où elle vient",
+    "contact.title":"<em>Parlons-en</em>.",
+    "contact.text":"Je recherche un stage à partir d'avril 2027 et un graduate programme à partir de septembre 2027, dans la tech, les startups, l'IA et le capital-risque.",
+    "copy":"Copier","copied":"Email copié","cvfail":"Téléchargement indisponible ici. Essayez le profil LinkedIn.",
+    "native":"Langue maternelle","learning":"En apprentissage","cur.open":"Ouvrir","cur.close":"Fermer","cur.write":"Écrire","cur.visit":"Voir","cur.pdf":"PDF","cur.why":"Pourquoi","cur.see":"Voir"
+  }
+};
+
+/* Stylized flags, drawn as simple geometry */
+const FLAGS = {
+  it:'<svg viewBox="0 0 24 24"><rect width="8" height="24" fill="#1f8a4c"/><rect x="8" width="8" height="24" fill="#fff"/><rect x="16" width="8" height="24" fill="#d2232a"/></svg>',
+  lu:'<svg viewBox="0 0 24 24"><rect width="24" height="8" fill="#ef3340"/><rect y="8" width="24" height="8" fill="#fff"/><rect y="16" width="24" height="8" fill="#00a3e0"/></svg>',
+  fr:'<svg viewBox="0 0 24 24"><rect width="8" height="24" fill="#22409a"/><rect x="8" width="8" height="24" fill="#fff"/><rect x="16" width="8" height="24" fill="#e1262d"/></svg>',
+  de:'<svg viewBox="0 0 24 24"><rect width="24" height="8" fill="#151515"/><rect y="8" width="24" height="8" fill="#dd0000"/><rect y="16" width="24" height="8" fill="#ffce00"/></svg>',
+  kr:'<svg viewBox="0 0 24 24"><rect width="24" height="24" fill="#fff"/><g transform="rotate(-34 12 12)"><path d="M7 12a5 5 0 0 1 10 0a2.5 2.5 0 0 1-5 0a2.5 2.5 0 0 0-5 0z" fill="#cd2e3a"/><path d="M7 12a2.5 2.5 0 0 0 5 0a2.5 2.5 0 0 1 5 0a5 5 0 0 1-10 0z" fill="#0047a0"/></g><g stroke="#151515" stroke-width="1.1" stroke-linecap="round"><path d="M3.6 7.6l2.2-3M5 8.4l2.2-3"/><path d="M18.2 4.6l2.2 3M16.8 5.4l2.2 3"/><path d="M3.6 16.4l2.2 3M5 15.6l2.2 3"/><path d="M18.2 19.4l2.2-3M16.8 18.6l2.2-3"/></g></svg>'
+};
+const FLAG_ORDER = ["it","lu","fr","de","kr"];
+
+const EDU_B = [
+  {id:"unibo",logo:"unibo",lh:50,lc:"#a8322b",yrs:"2022 – 2025",
+   name:{en:"University of Bologna",it:"Università di Bologna",fr:"Université de Bologne"},
+   deg:{en:"BSc in Business Administration",it:"Laurea triennale in Business Administration",fr:"Licence en Business Administration"},
+   sub:{en:"Thesis on internationalization",it:"Tesi sull'internazionalizzazione",fr:"Mémoire sur l'internationalisation"},
+   place:{en:"Bologna, Italy",it:"Bologna, Italia",fr:"Bologne, Italie"},coord:"44.49°N 11.34°E"},
+  {id:"icn",logo:"icn",lh:46,lc:"#e2733b",yrs:"2024 – 2025",
+   name:{en:"ICN Business School",it:"ICN Business School",fr:"ICN Business School"},
+   deg:{en:"Exchange semester",it:"Semestre di scambio",fr:"Semestre d'échange"},
+   sub:{en:"Bachelor in Management",it:"Bachelor in Management",fr:"Bachelor in Management"},
+   place:{en:"Nancy, France",it:"Nancy, Francia",fr:"Nancy, France"},coord:"48.69°N 6.18°E"},
+  {id:"pdai",logo:"unibo",lh:50,lc:"#a8322b",yrs:"2024",
+   name:{en:"PDAI",it:"PDAI",fr:"PDAI"},
+   deg:{en:"Entrepreneurial Ignition Program",it:"Entrepreneurial Ignition Program",fr:"Entrepreneurial Ignition Program"},
+   sub:{en:"4 months, with Bologna Business School and Intesa Sanpaolo",it:"4 mesi, con Bologna Business School e Intesa Sanpaolo",fr:"4 mois, avec Bologna Business School et Intesa Sanpaolo"},
+   place:{en:"Bologna, Italy",it:"Bologna, Italia",fr:"Bologne, Italie"},coord:"44.49°N 11.34°E"}
+];
+
+const WORK = [
+  {id:"ccs",c:"#1b2a52",tx:"#f3c55b",lh:30,org:"CEMS Club Seoul",short:"CEMS Club Seoul",tiny:"CEMS Club",coord:"37.59°N 127.03°E",s:2026.67,e:2026.86,now:true,
+   role:{en:"Head of Corporate",it:"Head of Corporate",fr:"Head of Corporate"},
+   yrs:{en:"Sep 2026 – now",it:"Set 2026 – oggi",fr:"Sept. 2026 – auj."},
+   where:{en:"Seoul, South Korea",it:"Seul, Corea del Sud",fr:"Séoul, Corée du Sud"},
+   b:{en:["Building the club's relationships with companies in Korea.","Organized a visit to HD Hyundai GRC for MIM students: a long Q&A with the Group CIO & CDO and a tour of the cyber defence monitoring centre."],
+      it:["Gestione dei rapporti del club con le aziende in Corea.","Organizzata una visita all'HD Hyundai GRC per gli studenti MIM: un lungo Q&A con il Group CIO & CDO e la visita al centro di monitoraggio per la cyber difesa."],
+      fr:["Développement des relations du club avec les entreprises en Corée.","Organisation d'une visite du GRC d'HD Hyundai pour les étudiants du MIM : une longue session de questions avec le Group CIO & CDO et la visite du centre de surveillance cyber."]}},
+  {id:"be",c:"#4a3f48",tx:"#f1ebe6",lh:20,org:"Be | Shaping the Future",short:"Be | Shaping the Future",tiny:"Be",coord:"50.11°N 8.68°E",s:2025.92,e:2026.42,
+   role:{en:"Financial Reporting Assistant",it:"Financial Reporting Assistant",fr:"Financial Reporting Assistant"},
+   yrs:{en:"Dec 2025 – May 2026",it:"Dic 2025 – Mag 2026",fr:"Déc. 2025 – mai 2026"},
+   where:{en:"Frankfurt, Germany",it:"Francoforte, Germania",fr:"Francfort, Allemagne"},
+   note:{en:"6-month internship",it:"Stage di 6 mesi",fr:"Stage de 6 mois"},
+   b:{en:["Coordinated financial reporting across 7 offices in Germany, Austria and Switzerland.","Budget planning, forecasting and variance analysis.","Multi-entity consolidation with international teams."],
+      it:["Coordinamento del reporting finanziario di 7 uffici tra Germania, Austria e Svizzera.","Budget, forecast e analisi degli scostamenti.","Consolidamento multi-entità con team internazionali."],
+      fr:["Coordination du reporting financier de 7 bureaux en Allemagne, Autriche et Suisse.","Budget, prévisions et analyse des écarts.","Consolidation multi-entités avec des équipes internationales."]}},
+  {id:"sfc",c:"#ecebe6",tx:"#141414",lh:30,org:"Starting Finance Club",short:"Starting Finance Club",tiny:"Starting Fin.",coord:"44.49°N 11.34°E",s:2025.17,e:2025.92,
+   role:{en:"Portfolio Management Associate",it:"Portfolio Management Associate",fr:"Portfolio Management Associate"},
+   yrs:{en:"Mar – Nov 2025",it:"Mar – Nov 2025",fr:"Mars – nov. 2025"},
+   where:{en:"Bologna, Italy",it:"Bologna, Italia",fr:"Bologne, Italie"},
+   b:{en:["Built and monitored simulated portfolios on rotating investment strategies.","Fundamental equity analysis and valuation models (DCF, value and growth).","Asset allocation across ETFs and SICAVs, tracked against benchmarks."],
+      it:["Costruzione e monitoraggio di portafogli simulati su strategie a rotazione.","Analisi fondamentale e modelli di valutazione (DCF, value e growth).","Asset allocation tra ETF e SICAV, confrontata con i benchmark."],
+      fr:["Construction et suivi de portefeuilles simulés selon des stratégies tournantes.","Analyse fondamentale et modèles de valorisation (DCF, value et growth).","Allocation d'actifs entre ETF et SICAV, suivie face aux benchmarks."]}},
+  {id:"toshi",c:"#141414",tx:"#f5f5f0",lh:16,org:"TOSHI SRLS",short:"TOSHI",coord:"41.90°N 12.50°E",s:2022.0,e:2025.95,
+   role:{en:"Co-Founder & Sole Director",it:"Co-fondatore e Amministratore unico",fr:"Co-fondateur et gérant"},
+   yrs:{en:"2022 – 2025",it:"2022 – 2025",fr:"2022 – 2025"},
+   where:{en:"Rome, Italy",it:"Roma, Italia",fr:"Rome, Italie"},
+   b:{en:["Founded and ran a design company, from registration to daily operations.","Produced 2,000+ garments for Roman high schools, handling marketing and collaborations.","Designed and patented industrial design products.","Unibo Start-up accreditation in 2024 and selection for SACE's export programme."],
+      it:["Fondata e gestita una società di design, dalla registrazione all'operatività.","Oltre 2.000 capi prodotti per i licei romani, con marketing e collaborazioni.","Progettati e brevettati prodotti di industrial design.","Accreditamento Unibo Start-up nel 2024 e selezione nel programma export di SACE."],
+      fr:["Création et gestion d'une société de design, de l'immatriculation aux opérations.","Plus de 2 000 vêtements produits pour les lycées romains, marketing et partenariats compris.","Conception et dépôt de brevets de produits de design industriel.","Accréditation Unibo Start-up en 2024 et sélection au programme export de SACE."]}},
+  {id:"lipu",c:"#c8141e",tx:"#ffffff",lh:24,org:"LIPU",short:"LIPU",coord:"41.90°N 12.50°E",s:2015.0,e:2022.95,
+   role:{en:"Volunteer",it:"Volontario",fr:"Bénévole"},
+   yrs:{en:"2015 – 2022",it:"2015 – 2022",fr:"2015 – 2022"},
+   where:{en:"Rome, Italy",it:"Roma, Italia",fr:"Rome, Italie"},
+   b:{en:["Helped restore a nature oasis.","Organized awareness events on pollution and the environment.","Helped create an inclusive space for local communities in need."],
+      it:["Recupero di un'oasi naturalistica.","Organizzazione di eventi di sensibilizzazione su inquinamento e ambiente.","Contributo alla creazione di uno spazio inclusivo per le comunità locali in difficoltà."],
+      fr:["Réhabilitation d'une oasis naturelle.","Organisation d'événements de sensibilisation à la pollution et à l'environnement.","Contribution à un espace inclusif pour les communautés locales dans le besoin."]}}
+];
+
+
+/* Where each skill comes from */
+const REF = {
+  ccs:{w:0},be:{w:1},sfc:{w:2},toshi:{w:3},lipu:{w:4},
+  ku:{el:"ku",c:"#7f1d2b",lg:"ku",n:"Korea University",y:"2026"},
+  hec:{el:"hec",c:"#13244f",lg:"hec",n:"HEC Paris",y:"2027"},
+  unibo:{el:"uc-unibo",c:"#a8322b",lg:"unibo",n:{en:"University of Bologna",it:"Università di Bologna",fr:"Université de Bologne"},y:"2022 – 2025"},
+  icn:{el:"uc-icn",c:"#e2733b",lg:"icn",n:"ICN Business School",y:"2024 – 2025"},
+  pdai:{el:"uc-pdai",c:"#a8322b",lg:"unibo",n:"PDAI",y:"2024"}
+};
+const GROUPS = [
+  {id:"biz",n:{en:"Business & growth",it:"Business e crescita",fr:"Business et croissance"}},
+  {id:"fin",n:{en:"Finance",it:"Finanza",fr:"Finance"}},
+  {id:"ppl",n:{en:"People & leadership",it:"Persone e leadership",fr:"Leadership et équipes"}},
+  {id:"sus",n:{en:"Sustainability",it:"Sostenibilità",fr:"Durabilité"}}
+];
+const SKILLS = [
+  {g:"biz",r:["ccs"],n:{en:"Business development",it:"Business development",fr:"Business development"},
+   t:{en:"As Head of Corporate at CEMS Club Seoul I approach companies in Korea and turn a first contact into something concrete for students. The HD Hyundai GRC visit started from a single introduction and ended with an on-site Q&A with the Group CIO & CDO.",
+      it:"Come Head of Corporate del CEMS Club Seoul contatto aziende in Corea e trasformo un primo contatto in qualcosa di concreto per gli studenti. La visita all'HD Hyundai GRC è partita da una sola presentazione ed è finita con un Q&A in sede con il Group CIO & CDO.",
+      fr:"En tant que Head of Corporate du CEMS Club Seoul, je contacte des entreprises en Corée et je transforme un premier échange en projet concret pour les étudiants. La visite du GRC d'HD Hyundai est partie d'une simple mise en relation et s'est terminée par une séance de questions sur place avec le Group CIO & CDO."}},
+  {g:"biz",r:["toshi"],n:{en:"Go-to-market strategy",it:"Strategia go-to-market",fr:"Stratégie go-to-market"},
+   t:{en:"With TOSHI we brought our garments to Roman high schools ourselves, handling marketing and collaborations. More than 2,000 pieces produced taught me how a product actually reaches the people who buy it.",
+      it:"Con TOSHI abbiamo portato i nostri capi nei licei romani da soli, occupandoci di marketing e collaborazioni. Oltre 2.000 pezzi prodotti mi hanno insegnato come un prodotto arriva davvero a chi lo compra.",
+      fr:"Avec TOSHI, nous avons amené nos vêtements dans les lycées romains nous-mêmes, en gérant marketing et partenariats. Plus de 2 000 pièces produites m'ont appris comment un produit atteint vraiment ceux qui l'achètent."}},
+  {g:"biz",r:["toshi","pdai"],n:{en:"Business model validation",it:"Validazione del business model",fr:"Validation du business model"},
+   t:{en:"TOSHI had to prove its model to win the University of Bologna's Call for Startup in 2024. The PDAI programme, with Bologna Business School and Intesa Sanpaolo, gave me a method to test assumptions before scaling.",
+      it:"TOSHI ha dovuto dimostrare la solidità del suo modello per vincere la Call for Startup dell'Università di Bologna nel 2024. Il PDAI, con Bologna Business School e Intesa Sanpaolo, mi ha dato un metodo per testare le ipotesi prima di crescere.",
+      fr:"TOSHI a dû prouver la solidité de son modèle pour remporter la Call for Startup de l'Université de Bologne en 2024. Le PDAI, avec Bologna Business School et Intesa Sanpaolo, m'a donné une méthode pour tester les hypothèses avant de passer à l'échelle."}},
+  {g:"biz",r:["pdai","toshi"],n:{en:"Value proposition design",it:"Value proposition design",fr:"Proposition de valeur"},
+   t:{en:"At PDAI I learned to design and test a value proposition with structured tools. TOSHI is where I applied it, deciding what our products had to offer students to be worth buying.",
+      it:"Al PDAI ho imparato a progettare e testare una value proposition con strumenti strutturati. In TOSHI l'ho applicata, decidendo cosa dovevano offrire i nostri prodotti agli studenti per valere l'acquisto.",
+      fr:"Au PDAI, j'ai appris à concevoir et tester une proposition de valeur avec des outils structurés. Chez TOSHI, je l'ai appliquée en définissant ce que nos produits devaient offrir aux étudiants pour mériter l'achat."}},
+  {g:"biz",r:["unibo","toshi","ku"],n:{en:"Internationalization",it:"Internazionalizzazione",fr:"Internationalisation"},
+   t:{en:"I wrote my bachelor's thesis on internationalization, TOSHI was selected for SACE's export programme, and at Korea University I'm studying global strategy through cases such as LG Electronics in China.",
+      it:"Ho scritto la tesi triennale sull'internazionalizzazione, TOSHI è stata selezionata per il programma export di SACE e alla Korea University studio global strategy con casi come LG Electronics in Cina.",
+      fr:"J'ai consacré mon mémoire de licence à l'internationalisation, TOSHI a été sélectionnée pour le programme export de SACE et, à Korea University, j'étudie la stratégie globale à travers des cas comme LG Electronics en Chine."}},
+  {g:"biz",r:["toshi","ccs"],n:{en:"Partnerships",it:"Partnership",fr:"Partenariats"},
+   t:{en:"At TOSHI I managed the collaborations that brought our products into schools. At CEMS Club Seoul I now look after the club's relationships with companies.",
+      it:"In TOSHI gestivo le collaborazioni che portavano i nostri prodotti nelle scuole. Al CEMS Club Seoul oggi curo i rapporti del club con le aziende.",
+      fr:"Chez TOSHI, je gérais les partenariats qui faisaient entrer nos produits dans les écoles. Au CEMS Club Seoul, je m'occupe aujourd'hui des relations du club avec les entreprises."}},
+  {g:"biz",r:["toshi"],n:{en:"Product design & patents",it:"Product design e brevetti",fr:"Design produit et brevets"},
+   t:{en:"At TOSHI I designed industrial design products and took them through the patent process, alongside the clothing line.",
+      it:"In TOSHI ho progettato prodotti di industrial design e li ho portati fino al brevetto, accanto alla linea di abbigliamento.",
+      fr:"Chez TOSHI, j'ai conçu des produits de design industriel et les ai menés jusqu'au brevet, en parallèle de la ligne de vêtements."}},
+  {g:"biz",r:["ccs","lipu"],n:{en:"Event organization",it:"Organizzazione di eventi",fr:"Organisation d'événements"},
+   t:{en:"For the HD Hyundai visit I polled classmates on dates, gave the company the headcount and participant profiles, and coordinated registration with their team. Before that, I organized awareness events on pollution with LIPU.",
+      it:"Per la visita in HD Hyundai ho raccolto le disponibilità dei compagni, fornito all'azienda numero e profilo dei partecipanti e coordinato le registrazioni con il loro team. Prima ancora, con la LIPU, ho organizzato eventi di sensibilizzazione sull'inquinamento.",
+      fr:"Pour la visite chez HD Hyundai, j'ai sondé mes camarades sur les dates, transmis à l'entreprise le nombre et le profil des participants et coordonné les inscriptions avec leur équipe. Avant cela, j'ai organisé des événements de sensibilisation à la pollution avec la LIPU."}},
+  {g:"fin",r:["be"],n:{en:"Financial reporting & consolidation",it:"Financial reporting e consolidamento",fr:"Reporting financier et consolidation"},
+   t:{en:"During my internship at Be | Shaping the Future in Frankfurt I coordinated financial reporting for 7 offices across Germany, Austria and Switzerland, and worked with international teams on multi-entity consolidation.",
+      it:"Durante lo stage in Be | Shaping the Future a Francoforte ho coordinato il reporting finanziario di 7 uffici tra Germania, Austria e Svizzera e lavorato con team internazionali al consolidamento multi-entità.",
+      fr:"Pendant mon stage chez Be | Shaping the Future à Francfort, j'ai coordonné le reporting financier de 7 bureaux en Allemagne, Autriche et Suisse et travaillé avec des équipes internationales sur la consolidation multi-entités."}},
+  {g:"fin",r:["be"],n:{en:"Budgeting & forecasting",it:"Budgeting e forecasting",fr:"Budget et prévisions"},
+   t:{en:"At Be I supported budget planning and forecasts for the offices in Germany, Austria and Switzerland, bringing each office's numbers into one view management could plan on.",
+      it:"In Be ho supportato budget e forecast per gli uffici in Germania, Austria e Svizzera, mettendo insieme i numeri di ogni ufficio in un'unica vista su cui il management potesse pianificare.",
+      fr:"Chez Be, j'ai participé au budget et aux prévisions des bureaux en Allemagne, Autriche et Suisse, en rassemblant les chiffres de chaque bureau dans une vue unique pour la planification du management."}},
+  {g:"fin",r:["be"],n:{en:"Variance analysis",it:"Analisi degli scostamenti",fr:"Analyse des écarts"},
+   t:{en:"Comparing actuals with budget was a core part of my role at Be: finding where the gaps came from and explaining them clearly.",
+      it:"Confrontare consuntivo e budget era una parte centrale del mio ruolo in Be: capire da dove nascevano gli scostamenti e spiegarli in modo chiaro.",
+      fr:"Comparer le réel au budget était au cœur de mon rôle chez Be : identifier l'origine des écarts et les expliquer clairement."}},
+  {g:"fin",r:["be"],n:{en:"Management reporting & KPIs",it:"Management reporting e KPI",fr:"Reporting de gestion et KPI"},
+   t:{en:"At Be I built KPI dashboards and management reports from ERP data, reconciling figures across entities so the numbers matched before they reached management.",
+      it:"In Be ho costruito dashboard di KPI e report per il management partendo dai dati ERP, riconciliando le cifre tra le entità prima che arrivassero ai responsabili.",
+      fr:"Chez Be, j'ai construit des tableaux de bord KPI et des rapports de gestion à partir des données ERP, en rapprochant les chiffres entre entités avant qu'ils n'arrivent au management."}},
+  {g:"fin",r:["sfc"],n:{en:"Valuation (DCF)",it:"Valutazione (DCF)",fr:"Valorisation (DCF)"},
+   t:{en:"At Starting Finance Club in Bologna I built DCF models and applied value and growth approaches to the companies we analyzed for our portfolios.",
+      it:"Allo Starting Finance Club di Bologna ho costruito modelli DCF e applicato approcci value e growth alle società che analizzavamo per i portafogli.",
+      fr:"Au Starting Finance Club de Bologne, j'ai construit des modèles DCF et appliqué des approches value et growth aux sociétés que nous analysions pour nos portefeuilles."}},
+  {g:"fin",r:["sfc"],n:{en:"Equity research",it:"Analisi azionaria",fr:"Analyse actions"},
+   t:{en:"Fundamental analysis of listed companies was the starting point of every investment decision we made at Starting Finance Club.",
+      it:"L'analisi fondamentale delle società quotate era il punto di partenza di ogni decisione d'investimento allo Starting Finance Club.",
+      fr:"L'analyse fondamentale des sociétés cotées était le point de départ de chaque décision d'investissement au Starting Finance Club."}},
+  {g:"fin",r:["sfc"],n:{en:"Portfolio construction",it:"Costruzione di portafoglio",fr:"Construction de portefeuille"},
+   t:{en:"I designed simulated portfolios on rotating strategies and allocated across ETFs and SICAVs, tracking results against benchmarks.",
+      it:"Ho progettato portafogli simulati su strategie a rotazione e allocato tra ETF e SICAV, misurando i risultati rispetto ai benchmark.",
+      fr:"J'ai conçu des portefeuilles simulés sur des stratégies tournantes et réparti les actifs entre ETF et SICAV, en mesurant les résultats face aux benchmarks."}},
+  {g:"fin",r:["toshi"],n:{en:"Cost structure & resource allocation",it:"Struttura dei costi e allocazione delle risorse",fr:"Structure de coûts et allocation des ressources"},
+   t:{en:"As sole director of TOSHI I decided where a small budget went, between production, design and marketing, and kept costs in line with the price students would pay.",
+      it:"Da amministratore unico di TOSHI decidevo dove andava un budget limitato, tra produzione, design e marketing, e tenevo i costi in linea con il prezzo che gli studenti erano disposti a pagare.",
+      fr:"En tant que gérant de TOSHI, je décidais où allait un budget limité, entre production, design et marketing, et je gardais des coûts compatibles avec le prix que les étudiants étaient prêts à payer."}},
+  {g:"ppl",r:["toshi"],n:{en:"Entrepreneurial leadership",it:"Leadership imprenditoriale",fr:"Leadership entrepreneurial"},
+   t:{en:"I co-founded TOSHI in high school and ran it as sole director for three years, from registering the company to leading the people around it.",
+      it:"Ho co-fondato TOSHI al liceo e l'ho guidata da amministratore unico per tre anni, dalla registrazione della società alla gestione delle persone coinvolte.",
+      fr:"J'ai cofondé TOSHI au lycée et l'ai dirigée comme gérant pendant trois ans, de l'immatriculation de la société à la coordination des personnes impliquées."}},
+  {g:"ppl",r:["be","ku"],n:{en:"Cross-border teamwork",it:"Lavoro in team internazionali",fr:"Travail en équipes internationales"},
+   t:{en:"In Frankfurt I worked every day with colleagues in Germany, Austria and Switzerland. On the CEMS master, every group project at Korea University mixes nationalities and ways of working.",
+      it:"A Francoforte lavoravo ogni giorno con colleghi in Germania, Austria e Svizzera. Nel master CEMS ogni progetto di gruppo alla Korea University mescola nazionalità e modi di lavorare.",
+      fr:"À Francfort, je travaillais chaque jour avec des collègues en Allemagne, en Autriche et en Suisse. Dans le master CEMS, chaque projet de groupe à Korea University mêle nationalités et façons de travailler."}},
+  {g:"ppl",r:["icn","be","ku"],n:{en:"Cross-cultural communication",it:"Comunicazione interculturale",fr:"Communication interculturelle"},
+   t:{en:"I've studied or worked in Italy, France, Germany and South Korea, and I'm now learning Korean for business. Each move changed how I communicate with the people around me.",
+      it:"Ho studiato o lavorato in Italia, Francia, Germania e Corea del Sud, e ora sto imparando il coreano per il business. Ogni trasferimento ha cambiato il mio modo di comunicare con le persone intorno a me.",
+      fr:"J'ai étudié ou travaillé en Italie, en France, en Allemagne et en Corée du Sud, et j'apprends maintenant le coréen des affaires. Chaque déménagement a changé ma façon de communiquer avec les personnes autour de moi."}},
+  {g:"ppl",r:["lipu","ku"],n:{en:"Public speaking",it:"Public speaking",fr:"Prise de parole"},
+   t:{en:"I started by speaking about sustainability at LIPU events in Rome. Today I present group work at Korea University, from LEGO's digital transformation to LG's strategy in China.",
+      it:"Ho iniziato parlando di sostenibilità agli eventi della LIPU a Roma. Oggi presento lavori di gruppo alla Korea University, dalla trasformazione digitale di LEGO alla strategia di LG in Cina.",
+      fr:"J'ai commencé par parler de durabilité lors des événements de la LIPU à Rome. Aujourd'hui, je présente des travaux de groupe à Korea University, de la transformation digitale de LEGO à la stratégie de LG en Chine."}},
+  {g:"ppl",r:["ccs"],n:{en:"Senior stakeholder outreach",it:"Relazioni con stakeholder senior",fr:"Relations avec des dirigeants"},
+   t:{en:"Organizing the HD Hyundai visit meant writing to a Group CIO & CDO, answering his questions on format and audience, and keeping him updated until the day itself.",
+      it:"Organizzare la visita in HD Hyundai ha voluto dire scrivere a un Group CIO & CDO, rispondere alle sue domande su formato e partecipanti e tenerlo aggiornato fino al giorno stesso.",
+      fr:"Organiser la visite chez HD Hyundai, c'était écrire à un Group CIO & CDO, répondre à ses questions sur le format et le public, et le tenir informé jusqu'au jour J."}},
+  {g:"ppl",r:["lipu","ku"],n:{en:"Collaborative decision making",it:"Decisioni condivise",fr:"Décision collective"},
+   t:{en:"At LIPU, decisions on projects were taken together with the other volunteers. At Korea University, my Organizational Behavior project looks at decision making from the manager's side, through an interview I prepared.",
+      it:"Alla LIPU le decisioni sui progetti si prendevano insieme agli altri volontari. Alla Korea University il mio progetto di Organizational Behavior studia il decision making dal lato del manager, con un'intervista che ho preparato io.",
+      fr:"À la LIPU, les décisions sur les projets se prenaient avec les autres bénévoles. À Korea University, mon projet d'Organizational Behavior aborde la prise de décision du point de vue du manager, à travers un entretien que j'ai préparé."}},
+  {g:"sus",r:["toshi"],n:{en:"Circular economy",it:"Economia circolare",fr:"Économie circulaire"},
+   t:{en:"At TOSHI, circular economy principles guided our choices on materials and on the life of our products.",
+      it:"In TOSHI i principi dell'economia circolare hanno guidato le scelte sui materiali e sul ciclo di vita dei prodotti.",
+      fr:"Chez TOSHI, les principes de l'économie circulaire ont guidé nos choix de matériaux et de cycle de vie des produits."}},
+  {g:"sus",r:["lipu"],n:{en:"Sustainability campaigns",it:"Campagne di sensibilizzazione",fr:"Campagnes de sensibilisation"},
+   t:{en:"Seven years with LIPU in Rome: restoring a nature oasis, running awareness campaigns on pollution and helping build a space open to local communities in need.",
+      it:"Sette anni con la LIPU a Roma: il recupero di un'oasi naturalistica, campagne contro l'inquinamento e la creazione di uno spazio aperto alle comunità locali in difficoltà.",
+      fr:"Sept ans avec la LIPU à Rome : la réhabilitation d'une oasis naturelle, des campagnes contre la pollution et la création d'un espace ouvert aux communautés locales dans le besoin."}}
+];
+
+const LANGS = [
+  {n:{en:"Italian",it:"Italiano",fr:"Italien"},lvl:"native",bars:6},
+  {n:{en:"English",it:"Inglese",fr:"Anglais"},lvl:"C1 · IELTS 7.5",bars:5},
+  {n:{en:"French",it:"Francese",fr:"Français"},lvl:"B1",bars:3},
+  {n:{en:"Korean",it:"Coreano",fr:"Coréen"},lvl:"learning",bars:1,lrn:true}
+];
+
+let lang = "en", skillSel = 0;
+/* Visit statistics: counts clicks when the page runs with GoatCounter, does nothing otherwise */
+function track(path, title){ try{ if(window.goatcounter && window.goatcounter.count) window.goatcounter.count({path:path, title:title || path, event:true}); }catch(e){} }
+const slug = t => t.toLowerCase().replace(/&/g,"and").replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+const $ = s => document.querySelector(s);
+const $$ = s => Array.from(document.querySelectorAll(s));
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const L = v => typeof v === "string" ? v : v[lang];
+const AR = {cems:3.58,ku:.74,hec:2.23,unibo:1,sfc:.94,lipu:1.53,ccs:1,toshi:3.55,be:2.87,icn:1.09};
+const lgm = (k, h, label) => `<span class="lgm" ${label ? `role="img" aria-label="${esc(label)}"` : 'aria-hidden="true"'} style="--m:url(logos/m/${k}.png);height:${h}px;aspect-ratio:${AR[k]}"></span>`;
+
+function renderFlags(){
+  const html = FLAG_ORDER.map(k => `<span class="flag">${FLAGS[k]}</span>`).join("");
+  $$("[data-flags]").forEach(el => el.innerHTML = html);
+}
+
+function renderEdu(){
+  $("#ucards").innerHTML = EDU_B.map(u => `
+    <article class="ucard" id="uc-${u.id}">
+      <div class="card-top" style="--lc:${u.lc}">${lgm(u.logo, u.lh, L(u.name))}<span class="yrs mono">${u.yrs}</span></div>
+      <div><h3>${esc(L(u.name))}</h3><div class="deg">${esc(L(u.deg))}</div><div class="sub">${esc(L(u.sub))}</div></div>
+      <div class="card-foot"><div class="place"><span>${esc(L(u.place))}</span><span class="mono">${u.coord}</span></div></div>
+    </article>`).join("");
+}
+
+function hl(i, on){
+  const sp = document.querySelector(`.spine[data-i="${i}"]`); if(sp) sp.classList.toggle("hl", on);
+}
+function openWork(i){
+  const sp = document.querySelector(`.spine[data-i="${i}"]`); if(!sp) return;
+  sp.classList.add("open"); sp.querySelector(".spine-row").setAttribute("aria-expanded", "true");
+  sp.scrollIntoView({behavior: reduce ? "auto" : "smooth", block:"center"});
+  sp.classList.add("hl"); setTimeout(() => sp.classList.remove("hl"), 1600);
+}
+
+function renderWork(){
+  const openIdx = $$(".spine.open").map(el => +el.dataset.i);
+  $("#stackIn").innerHTML = WORK.map((w,i) => `
+    <div class="spine${openIdx.includes(i) ? " open" : ""}" data-i="${i}" id="w-${w.id}" style="--c:${w.c};--t:${w.tx}">
+      <button class="spine-row" data-cursor="toggle" aria-expanded="${openIdx.includes(i)}" aria-controls="det-${i}">
+        <span class="yrs">${esc(L(w.yrs))}${w.now ? `<span class="now">${T[lang]["ku.status"]}</span>` : ""}</span>
+        <span class="role">${esc(L(w.role))}</span>
+        <span class="org">${lgm(w.id, w.lh)}<span>${esc(w.org)}</span></span>
+        <span class="plus" aria-hidden="true">+</span>
+      </button>
+      <div class="detail" id="det-${i}"><div><div class="detail-in">
+        <div class="where"><span>${esc(L(w.where))}</span>${w.note ? `<span>${esc(L(w.note))}</span>` : ""}<span style="opacity:.7">${w.coord}</span></div>
+        <ul>${w.b[lang].map(x => `<li>${esc(x)}</li>`).join("")}</ul>
+      </div></div></div>
+    </div>`).join("");
+  $$(".spine-row").forEach(btn => {
+    const sp = btn.parentElement, i = +sp.dataset.i;
+    btn.addEventListener("click", () => { const open = sp.classList.toggle("open"); btn.setAttribute("aria-expanded", open); if(open) track("experience-" + WORK[i].id, WORK[i].org); });
+    btn.addEventListener("pointerenter", () => hl(i, true));
+    btn.addEventListener("pointerleave", () => hl(i, false));
+  });
+  updateScroll();
+}
+
+function refInfo(k){
+  const r = REF[k];
+  if(r.w != null){ const w = WORK[r.w]; return {c:(w.id === "sfc" ? w.tx : w.c), lg:w.id, n:w.org, y:L(w.yrs)}; }
+  return {c:r.c, lg:r.lg, n:L(r.n), y:r.y};
+}
+function renderSkills(){
+  $("#skGroups").innerHTML = GROUPS.map(g => {
+    const items = SKILLS.map((s,i) => [s,i]).filter(([s]) => s.g === g.id);
+    return `<div class="sk-group"><h3><b>${esc(g.n[lang])}</b><span>${items.length}</span></h3><div class="chips">${
+      items.map(([s,i]) => `<button class="chip" data-s="${i}" data-cursor="why" aria-pressed="${i === skillSel}" aria-controls="skPanel">${esc(s.n[lang])}</button>`).join("")
+    }</div></div>`;
+  }).join("");
+  $$(".chip").forEach(c => c.addEventListener("click", () => { const k = +c.dataset.s; selectSkill(k, true); track("skill-" + slug(SKILLS[k].n.en), SKILLS[k].n.en); }));
+  renderPanel(false);
+}
+function selectSkill(i, user){
+  skillSel = i;
+  $$(".chip").forEach(c => c.setAttribute("aria-pressed", +c.dataset.s === i));
+  renderPanel(true);
+  if(user && innerWidth < 860){
+    const p = $("#skPanel"), r = p.getBoundingClientRect();
+    if(r.top > innerHeight*0.7 || r.bottom < 0) p.scrollIntoView({behavior: reduce ? "auto" : "smooth", block:"center"});
+  }
+}
+function renderPanel(anim){
+  const s = SKILLS[skillSel], g = GROUPS.find(x => x.id === s.g);
+  $("#skPanel").innerHTML = `<div class="${anim ? "sk-anim" : ""}">
+    <span class="grp mono">${esc(g.n[lang])}</span>
+    <h4>${esc(s.n[lang])}</h4>
+    <p>${esc(s.t[lang])}</p>
+    <span class="wl mono">${T[lang]["skills.where"]}</span>
+    <div class="refs">${s.r.map(k => { const r = refInfo(k); return `<button class="ref" data-ref="${k}" data-cursor="see"><span class="rl" style="color:${r.c}">${lgm(r.lg, 22)}</span><span class="rn">${esc(r.n)}</span><span class="ry">${esc(r.y)}</span></button>`; }).join("")}</div>
+  </div>`;
+  $$(".ref").forEach(b => b.addEventListener("click", () => {
+    track("skill-source-" + b.dataset.ref);
+    const r = REF[b.dataset.ref];
+    if(r.w != null) openWork(r.w);
+    else { const el = document.getElementById(r.el); if(el) el.scrollIntoView({behavior: reduce ? "auto" : "smooth", block:"center"}); }
+  }));
+}
+
+function renderLangs(){
+  $("#langs").innerHTML = LANGS.map(l => {
+    const lvl = l.lvl === "native" ? T[lang].native : l.lvl === "learning" ? T[lang].learning : l.lvl;
+    const bars = Array.from({length:6},(_,k) => `<span class="${k < l.bars ? (l.lrn ? "lrn" : "on") : ""}"></span>`).join("");
+    return `<div class="langrow"><div class="top"><span>${esc(l.n[lang])}</span><span class="lvl">${esc(lvl)}</span></div><span class="bars" aria-hidden="true">${bars}</span></div>`;
+  }).join("");
+}
+
+function setLang(l){
+  if(!T[l]) return;
+  lang = l;
+  document.documentElement.lang = l;
+  $$("[data-i18n]").forEach(el => { const v = T[l][el.dataset.i18n]; if(v != null) el.innerHTML = v; });
+  $$(".lang button").forEach(b => b.setAttribute("aria-pressed", b.dataset.lang === l));
+  renderEdu(); renderWork(); renderSkills(); renderLangs();
+  if(curKey) setCursorLabel();
+  try{ localStorage.setItem("tn-lang", l); }catch(e){}
+}
+
+$$(".lang button").forEach(b => b.addEventListener("click", () => { setLang(b.dataset.lang); track("language-" + b.dataset.lang); }));
+$$("[data-go]").forEach(b => b.addEventListener("click", e => {
+  e.preventDefault();
+  const el = document.getElementById(b.dataset.go);
+  if(el) el.scrollIntoView({behavior: reduce ? "auto" : "smooth", block:"start"});
+}));
+
+let tt;
+function toast(msg){ const t = $("#toast"); t.textContent = msg; t.classList.add("show"); clearTimeout(tt); tt = setTimeout(() => t.classList.remove("show"), 2200); }
+$("#copyBtn").addEventListener("click", async () => {
+  try{ await navigator.clipboard.writeText("novelliteo1@gmail.com"); toast(T[lang].copied); }
+  catch(e){ toast("novelliteo1@gmail.com"); }
+});
+
+/* CV download through the viewer when available, plain link otherwise */
+let downloads = null;
+try{ if(window.claude && window.claude.use) window.claude.use("downloads").then(d => { downloads = d; }).catch(() => {}); }catch(e){}
+$$(".cv-link").forEach(a => a.addEventListener("click", async e => {
+  if(!downloads) return;
+  e.preventDefault();
+  try{
+    const r = await fetch(a.getAttribute("href"));
+    await downloads.save({filename:"Teo_Novelli_CV.pdf", data: await r.blob()});
+  }catch(err){
+    if(err && err.code === "declined") return;
+    toast(T[lang].cvfail);
+  }
+}));
+
+/* Motion */
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const finePointer = matchMedia("(pointer: fine)").matches;
+const nav = $("#nav"), photoMove = $("#photoMove"), nameEl = $(".name"), stackIn = $("#stackIn"), ku = $("#ku"), hec = $("#hec");
+const clamp = (v,a,b) => Math.min(b, Math.max(a, v));
+const ease = t => 1 - Math.pow(1 - t, 3);
+function progress(el, start, end){
+  const r = el.getBoundingClientRect(), vh = innerHeight;
+  return clamp((vh*start - r.top) / (vh*(start - end)), 0, 1);
+}
+const JIT = [[-26,-3.5],[34,2.8],[-12,-1.6],[40,3.6],[-30,-2.4]];
+const tilt = new Map();
+function tiltOf(el){ return tilt.get(el) || [0,0]; }
+function tiltStr(el){ const t = tiltOf(el); return ` perspective(1100px) rotateX(${t[1]}deg) rotateY(${t[0]}deg)`; }
+if(!reduce && finePointer){
+  document.addEventListener("pointermove", e => {
+    const card = e.target.closest ? e.target.closest(".school, .ucard") : null;
+    $$(".school, .ucard").forEach(el => { if(el !== card && tilt.has(el)){ tilt.delete(el); } });
+    if(card){
+      const r = card.getBoundingClientRect();
+      tilt.set(card, [((e.clientX - r.left)/r.width - .5)*9, -((e.clientY - r.top)/r.height - .5)*9]);
+    }
+    updateScroll();
+  }, {passive:true});
+}
+
+let ticking = false;
+function updateScroll(){
+  ticking = false;
+  nav.classList.toggle("pill", scrollY > 30);
+  if(reduce) return;
+  const stack = $("#stack"); if(!stack) return;
+  const p = ease(progress(stack, 1.0, 0.78)), q = 1 - p, k = Math.min(1, innerWidth/900);
+  stackIn.style.transform = `rotateX(${40*q}deg) rotateZ(${-10*q}deg) scale(${0.86 + 0.14*p})`;
+  $$(".spine").forEach((s,i) => {
+    const j = JIT[i % JIT.length];
+    s.style.transform = `translate3d(${j[0]*q*k}px, ${-i*30*q}px, ${i*6*q}px) rotateZ(${j[1]*q}deg)`;
+  });
+  const wide = innerWidth > 760;
+  const m = ease(progress($("#schools"), 1.0, 0.78)), n = 1 - m;
+  if(wide){
+    ku.style.transform = `translateX(${24*n}%) rotate(${-6*n}deg)` + tiltStr(ku);
+    hec.style.transform = `translateX(${-24*n}%) rotate(${5*n}deg)` + tiltStr(hec);
+  }else{
+    ku.style.transform = `rotate(${-3*n}deg)`;
+    hec.style.transform = `rotate(${3*n}deg)`;
+  }
+  const u = ease(progress($("#ucards"), 1.0, 0.82)), v = 1 - u;
+  $$(".ucard").forEach((c,i) => { c.style.transform = `translateY(${v*(50 + i*40)}px) rotate(${v*(i-1)*2}deg)` + (wide ? tiltStr(c) : ""); });
+}
+addEventListener("scroll", () => { if(!ticking){ ticking = true; requestAnimationFrame(updateScroll); } }, {passive:true});
+addEventListener("resize", updateScroll);
+const depthSeen = {};
+addEventListener("scroll", () => {
+  const d = (scrollY + innerHeight) / document.documentElement.scrollHeight;
+  [50, 90].forEach(m => { if(d*100 >= m && !depthSeen[m]){ depthSeen[m] = true; track("scroll-" + m, "Scrolled " + m + "%"); } });
+}, {passive:true});
+
+/* Mouse, hero depth, dot field, scroll velocity */
+let mx = 0, my = 0, cx = 0, cy = 0, px = -9999, py = -9999, spx = -9999, spy = -9999, hasPointer = false;
+const cursor = $("#cursor"), cursorLabel = $("#cursorLabel");
+let curX = innerWidth/2, curY = innerHeight/2, curTX = curX, curTY = curY, curKey = null;
+if(finePointer){
+  addEventListener("pointermove", e => {
+    mx = e.clientX/innerWidth*2 - 1; my = e.clientY/innerHeight*2 - 1;
+    px = e.clientX; py = e.clientY;
+    cursor.style.transform = `translate3d(${px}px, ${py}px, 0)`;
+    if(!hasPointer){ hasPointer = true; cursor.classList.add("on"); }
+  }, {passive:true});
+  document.addEventListener("pointerleave", () => { cursor.classList.remove("on"); hasPointer = false; px = py = -9999; });
+  document.addEventListener("pointerover", e => {
+    curKey = e.target.closest ? e.target.closest("[data-cursor]") : null;
+    setCursorLabel();
+  });
+  document.addEventListener("click", () => setTimeout(setCursorLabel, 0));
+}
+function setCursorLabel(){
+  if(!curKey || !document.body.contains(curKey)){ curKey = null; cursor.classList.remove("big"); return; }
+  let k = curKey.dataset.cursor;
+  if(k === "toggle") k = curKey.parentElement.classList.contains("open") ? "close" : "open";
+  cursorLabel.textContent = T[lang]["cur." + k] || "";
+  cursor.classList.add("big");
+}
+
+const field = $("#field"), fctx = field.getContext("2d"), hero = $("#top");
+let fw = 0, fh = 0;
+function sizeField(){
+  const r = hero.getBoundingClientRect(), dpr = Math.min(2, devicePixelRatio || 1);
+  fw = r.width; fh = r.height; field.width = fw*dpr; field.height = fh*dpr; fctx.setTransform(dpr,0,0,dpr,0,0);
+}
+const smooth = (a,b,x) => { const t = clamp((x-a)/(b-a),0,1); return t*t*(3-2*t); };
+function drawField(t){
+  fctx.clearRect(0,0,fw,fh);
+  const r = hero.getBoundingClientRect();
+  if(px < -9000){ spx = -9999; spy = -9999; }
+  else if(spx < -9000){ spx = px - r.left; spy = py - r.top; }
+  else { spx += (px - r.left - spx)*0.35; spy += (py - r.top - spy)*0.35; }
+  const gap = innerWidth < 700 ? 24 : 28, oy = (scrollY*0.25) % gap;
+  for(let y = gap/2 - oy; y < fh + gap; y += gap){
+    for(let x = gap/2; x < fw; x += gap){
+      const w = Math.sin(x*0.011 + t*0.0007) * Math.cos(y*0.013 - t*0.0005);
+      const dx = x - spx, dy = y - spy, d = Math.hypot(dx,dy) || 1;
+      const inf = Math.max(0, 1 - d/190), push = inf*inf*30;
+      const nx = x + dx/d*push, ny = y + dy/d*push + w*4;
+      const base = innerWidth < 820 ? 0.16 : 0.06 + 0.2*smooth(fw*0.38, fw*0.8, x);
+      const a = base + inf*0.6 + (w+1)*0.03;
+      const rad = 1.05 + inf*2.8 + (w+1)*0.3;
+      fctx.fillStyle = `rgba(47,82,196,${a.toFixed(3)})`;
+      fctx.beginPath(); fctx.arc(nx, ny, rad, 0, 6.283); fctx.fill();
+    }
+  }
+}
+sizeField(); addEventListener("resize", sizeField);
+if(reduce) drawField(0);
+
+let lastY = scrollY, vel = 0, lastDrawY = -1;
+function loop(t){
+  cx += (mx - cx)*0.16; cy += (my - cy)*0.16;
+  const y = scrollY;
+  vel += ((y - lastY) - vel)*0.4; lastY = y;
+  if(y < innerHeight*1.4){
+    photoMove.style.transform = `translate3d(${cx*-12}px, ${y*0.14 + cy*-8}px, 0) perspective(1000px) rotateY(${cx*7}deg) rotateX(${cy*-5}deg)`;
+    nameEl.style.transform = `translate3d(${cx*-10 - y*0.04}px, ${cy*-5}px, 0)`;
+    drawField(t);
+  }
+  if(y !== lastDrawY){ lastDrawY = y; updateScroll(); }
+  // blocks lean with scroll speed and come into focus as they enter
+  const sk = clamp(vel*0.05, -4, 4);
+  ["#stack","#schools","#ucards"].forEach(sel => {
+    const el = $(sel), r = el.getBoundingClientRect();
+    if(r.bottom < 0 || r.top > innerHeight) return;
+    el.style.transform = Math.abs(sk) > 0.02 ? `skewY(${sk.toFixed(3)}deg)` : "";
+    const b = (1 - progress(el, 1.0, 0.9))*4;
+    el.style.filter = b > 0.15 ? `blur(${b.toFixed(2)}px)` : "";
+  });
+  requestAnimationFrame(loop);
+}
+if(!reduce) requestAnimationFrame(loop);
+
+renderFlags();
+let saved = null;
+try{ saved = localStorage.getItem("tn-lang"); }catch(e){}
+setLang(saved && T[saved] ? saved : "en");
+</script>
+<script data-goatcounter="https://teo.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
